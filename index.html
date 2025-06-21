@@ -37,8 +37,7 @@
       color: #f97316;
     }
     .hero {
-  height: 100vh;
-  padding-top: 100px; /* pushes text down below the fixed header */
+      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -48,6 +47,17 @@
       padding: 0 20px;
       position: relative;
       overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      display: block;
+      height: 80px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background: transparent;
     }
     .hero video {
       position: absolute;
