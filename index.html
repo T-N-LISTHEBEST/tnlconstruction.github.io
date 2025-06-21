@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     body {
-      margin: 0;
+      margin: 1;
       font-family: 'Inter', sans-serif;
       background: #ffffff;
       color: #333;
@@ -17,7 +17,7 @@
     header {
       background: rgba(0, 0, 0, 0.8);
       color: #fff;
-      padding: 0 20px;
+      padding: 1 1px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -28,20 +28,24 @@
       height: 100px;
     }
 
+    /* ----- LOGO POSITION ----- */
     .logo-container {
       display: flex;
       align-items: center;
       cursor: pointer;
+      margin-left: 750px;
     }
 
     header img {
-      height: 70px;
+      height: 90px;
     }
 
+    /* ----- NAVIGATION MENU (ABOUT, SERVICES, CONTACT) ----- */
     nav {
       display: flex;
-      align-items: center;
-      gap: 20px;
+      align-items: left;
+      gap: 78px;
+      margin-right: 800px;
     }
 
     nav a {
@@ -75,7 +79,7 @@
         display: none;
         position: absolute;
         top: 100px;
-        left: 0;
+        left: 1;
         width: 100%;
         background: rgba(0, 0, 0, 0.9);
         flex-direction: column;
@@ -207,14 +211,19 @@
 </head>
 <body>
   <header>
+    <!-- ----- LOGO SECTION ----- -->
     <div class="logo-container" onclick="goHome()">
       <img src="logo.png" alt="T-N-L Logo">
     </div>
+
+    <!-- ----- MENU TOGGLE FOR MOBILE ----- -->
     <div class="menu-toggle" onclick="toggleMenu()">
       <span></span>
       <span></span>
       <span></span>
     </div>
+
+    <!-- ----- NAVIGATION LINKS ----- -->
     <nav id="nav">
       <a onclick="showSection('about')">About</a>
       <a onclick="showSection('services')">Services</a>
