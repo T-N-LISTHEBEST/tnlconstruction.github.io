@@ -20,7 +20,7 @@
       padding: 0 40px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       position: fixed;
       top: 0;
       width: 100%;
@@ -31,18 +31,18 @@
     .logo-container {
       display: flex;
       align-items: center;
+      cursor: pointer;
+      margin-right: 40px;
     }
 
     header img {
-      height: 60px;
-      margin-right: 30px;
+      height: 70px;
     }
 
     nav {
       display: flex;
       align-items: center;
       gap: 40px;
-      margin-left: auto;
     }
 
     nav a {
@@ -174,7 +174,7 @@
 </head>
 <body>
   <header>
-    <div class="logo-container">
+    <div class="logo-container" onclick="goHome()">
       <img src="logo.png" alt="T-N-L Logo">
     </div>
     <nav>
@@ -238,6 +238,11 @@
       document.getElementById('hero').style.display = 'none';
       document.querySelectorAll('.content-section').forEach(el => el.classList.remove('active'));
       document.getElementById(sectionId).classList.add('active');
+    }
+
+    function goHome() {
+      document.getElementById('hero').style.display = 'flex';
+      document.querySelectorAll('.content-section').forEach(el => el.classList.remove('active'));
     }
   </script>
 </body>
