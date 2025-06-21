@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     body {
-      margin: 1;
+      margin: 0;
       font-family: 'Inter', sans-serif;
       background: #ffffff;
       color: #333;
@@ -17,7 +17,7 @@
     header {
       background: rgba(0, 0, 0, 0.8);
       color: #fff;
-      padding: 1 1px;
+      padding: 1px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -33,7 +33,7 @@
       display: flex;
       align-items: center;
       cursor: pointer;
-      margin-left: 750px;
+      margin-left: 700px;
     }
 
     header img {
@@ -43,9 +43,11 @@
     /* ----- NAVIGATION MENU (ABOUT, SERVICES, CONTACT) ----- */
     nav {
       display: flex;
-      align-items: left;
-      gap: 78px;
-      margin-right: 800px;
+      align-items: center;
+      justify-content: center; /* Center alignment */
+      gap: 50px;
+      margin-right: 420px;
+      flex: 1;
     }
 
     nav a {
@@ -55,6 +57,7 @@
       transition: color 0.3s ease;
       cursor: pointer;
       font-size: 1.1rem;
+      white-space: nowrap;
     }
 
     nav a:hover {
@@ -230,11 +233,12 @@
       <span></span>
     </div>
 
-    <!-- ----- NAVIGATION LINKS ----- -->
+    <!-- ----- NAVIGATION LINKS (CENTERED) ----- -->
     <nav id="nav">
       <a onclick="showSection('about')">About</a>
       <a onclick="showSection('services')">Services</a>
       <a onclick="showSection('contact')">Contact</a>
+      <a onclick="showSection('build with us!')">Build With Us!</a>
     </nav>
   </header>
 
@@ -282,26 +286,45 @@
     </p>
   </section>
 
+  <section id="build with us!" class="content-section">
+    <h2>Build With Us</h2>
+    <form action="https://formspree.io/f/xjvnwvkw" method="POST">
+      <label>Name:<br><input type="text" name="name" required></label><br><br>
+      <label>Email:<br><input type="email" name="email" required></label><br><br>
+      <label>Phone Number:<br><input type="tel" name="phone" required></label><br><br>
+      <label>Service Needed:<br><textarea name="service" placeholder="e.g. Full Gut Rehab" required></textarea></label><br><br>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+
   <footer>
     &copy; 2025 T-N-L Construction LLC | Built with pride in Chicago.
   </footer>
 
   <script>
     function showSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      const nav = document.getElementById('nav');
+      if (!section || !nav) return;
+
       document.getElementById('hero').style.display = 'none';
       document.querySelectorAll('.content-section').forEach(el => el.classList.remove('active'));
-      document.getElementById(sectionId).classList.add('active');
-      document.getElementById('nav').classList.remove('active');
+      section.classList.add('active');
+      nav.classList.remove('active');
     }
 
     function goHome() {
+      const nav = document.getElementById('nav');
+      if (!nav) return;
+
       document.getElementById('hero').style.display = 'flex';
       document.querySelectorAll('.content-section').forEach(el => el.classList.remove('active'));
-      document.getElementById('nav').classList.remove('active');
+      nav.classList.remove('active');
     }
 
     function toggleMenu() {
-      document.getElementById('nav').classList.toggle('active');
+      const nav = document.getElementById('nav');
+      if (nav) nav.classList.toggle('active');
     }
   </script>
 </body>
