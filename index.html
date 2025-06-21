@@ -6,17 +6,14 @@
   <title>T-N-L Construction</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
+      margin: 0;
       font-family: 'Inter', sans-serif;
       background: #ffffff;
       color: #333;
       overflow-x: hidden;
     }
+
     header {
       background: rgba(0, 0, 0, 0.8);
       color: #fff;
@@ -41,30 +38,36 @@
       color: #f97316;
     }
     .hero {
-      position: relative;
-      width: 100vw;
       height: 100vh;
-      overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: center;
       color: white;
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      display: block;
+      height: 80px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
       z-index: 1;
+      background: transparent;
     }
     .hero video {
       position: fixed;
       top: 0;
       left: 0;
-      min-width: 100vw;
-      min-height: 100vh;
-      width: auto;
-      height: auto;
+      width: 100vw;
+      height: 100vh;
       object-fit: cover;
       z-index: -1;
-      opacity: 0;
-      animation: slideIn 1.5s ease-out forwards;
     }
     .hero h1, .hero p, .hero .btn {
       opacity: 0;
@@ -117,12 +120,6 @@
       text-align: center;
       padding: 30px 20px;
     }
-    @keyframes slideIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
     @keyframes slideText {
       to {
         opacity: 1;
@@ -142,10 +139,11 @@
   </header>
 
   <div class="hero">
-    <video autoplay muted loop playsinline id="bg-video">
-      <source src="tnl-bg.mp4" type="video/mp4" />
+    <video autoplay muted loop playsinline>
+      <source src="https://www.dropbox.com/scl/fi/o1jqjrh7nh1uasx36oz0p/tnl-bg.mp4?rlkey=o822lsa4488ne50ux998zw7zx&raw=1" type="video/mp4">
       Your browser does not support the video tag.
     </video>
+
     <h1>Bringing Chicago Homes Back to Life</h1>
     <p>Family-owned. Community-driven. 30+ years of combined experience in quality rehab and construction.</p>
     <a href="#contact" class="btn">Get a Free Estimate</a>
@@ -191,6 +189,7 @@
   </footer>
 
   <script>
+    // Animate sections on scroll
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
