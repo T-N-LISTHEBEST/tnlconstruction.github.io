@@ -51,21 +51,21 @@
       align-items: center;
       text-align: center;
       color: white;
+      z-index: 1;
     }
     .hero video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100vw;
-  min-height: 100vh;
-  width: auto;
-  height: auto;
-  object-fit: cover;
-  z-index: -1;
-  opacity: 0;
-  animation: slideIn 1.5s ease-out forwards;
-}
-
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100vw;
+      min-height: 100vh;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0;
+      animation: slideIn 1.5s ease-out forwards;
+    }
     .hero h1, .hero p, .hero .btn {
       opacity: 0;
       transform: translateY(30px);
