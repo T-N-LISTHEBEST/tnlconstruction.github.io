@@ -24,6 +24,7 @@
       top: 0;
       width: 100%;
       z-index: 1000;
+      height: 80px;
     }
     nav a {
       color: #fff;
@@ -36,7 +37,9 @@
       color: #f97316;
     }
     .hero {
-      height: 100vh;
+      height: calc(100vh - 80px);
+      margin-top: 80px;
+      padding-top: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
