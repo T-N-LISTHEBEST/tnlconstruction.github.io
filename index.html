@@ -27,12 +27,18 @@
       z-index: 1000;
       height: 80px;
     }
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
     header img {
-      height: 70px;
+      height: 120px;
+      margin-right: 20px;
     }
     nav {
       display: flex;
-      gap: 30px;
+      gap: 40px;
+      margin-right: 60px;
     }
     nav a {
       color: #fff;
@@ -146,7 +152,9 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="T-N-L Logo">
+    <div class="logo-container">
+      <img src="logo.png" alt="T-N-L Logo">
+    </div>
     <nav>
       <a onclick="showSection('about')">About</a>
       <a onclick="showSection('services')">Services</a>
