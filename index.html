@@ -28,7 +28,6 @@
       height: 100px;
     }
 
-    /* ----- LOGO POSITION ----- */
     .logo-container {
       display: flex;
       align-items: center;
@@ -40,11 +39,10 @@
       height: 90px;
     }
 
-    /* ----- NAVIGATION MENU (ABOUT, SERVICES, CONTACT) ----- */
     nav {
       display: flex;
       align-items: center;
-      justify-content: center; /* Center alignment */
+      justify-content: center;
       gap: 50px;
       margin-right: 420px;
       flex: 1;
@@ -165,6 +163,7 @@
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
+      cursor: pointer;
     }
 
     .content-section {
@@ -217,50 +216,26 @@
         transform: translateY(0);
       }
     }
-
-    <!-- Add to NAVIGATION LINKS -->
-<nav id="nav">
-  <a onclick="showSection('about')">About</a>
-  <a onclick="showSection('services')">Services</a>
-  <a onclick="showSection('contact')">Contact</a>
-  <a onclick="showSection('build-with-us')">Build With Us!</a>
-  <a onclick="showSection('free-estimate')">Free Estimate</a> <!-- NEW -->
-</nav>
-
-<!-- NEW FREE ESTIMATE SECTION -->
-<section id="free-estimate" class="content-section">
-  <h2>Request a Free Estimate</h2>
-  <form action="https://formspree.io/f/mrbkajwe" method="POST">
-    <label>Name:<br><input type="text" name="name" required></label><br><br>
-    <label>Email:<br><input type="email" name="email" required></label><br><br>
-    <label>Phone Number:<br><input type="tel" name="phone" required></label><br><br>
-    <label>Project Details:<br><textarea name="details" placeholder="Describe your project..." required></textarea></label><br><br>
-    <button type="submit" class="btn">Get My Free Estimate</button>
-  </form>
-</section>
-
   </style>
 </head>
 <body>
   <header>
-    <!-- ----- LOGO SECTION ----- -->
     <div class="logo-container" onclick="goHome()">
       <img src="logo.png" alt="T-N-L Logo">
     </div>
 
-    <!-- ----- MENU TOGGLE FOR MOBILE ----- -->
     <div class="menu-toggle" onclick="toggleMenu()">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
-    <!-- ----- NAVIGATION LINKS (CENTERED) ----- -->
     <nav id="nav">
       <a onclick="showSection('about')">About</a>
       <a onclick="showSection('services')">Services</a>
       <a onclick="showSection('contact')">Contact</a>
       <a onclick="showSection('build-with-us')">Build With Us!</a>
+      <a onclick="showSection('free-estimate')">Free Estimate</a> <!-- NEW -->
     </nav>
   </header>
 
@@ -271,6 +246,8 @@
     </video>
     <h1>Bringing Chicago Homes Back to Life</h1>
     <p>Family-owned. Community-driven. 30+ years of combined experience in quality rehab and construction.</p>
+    <br>
+    <button class="btn" onclick="showSection('free-estimate')">Request Free Estimate</button> <!-- NEW -->
   </div>
 
   <section id="about" class="content-section">
@@ -307,7 +284,6 @@
     </p>
   </section>
 
-  <!-- ----- FIXED BUILD WITH US SECTION ID AND FORMSPREE ENDPOINT ----- -->
   <section id="build-with-us" class="content-section">
     <h2>Build With Us</h2>
     <form action="https://formspree.io/f/mrbkajwe" method="POST">
@@ -316,6 +292,18 @@
       <label>Phone Number:<br><input type="tel" name="phone" required></label><br><br>
       <label>Service Needed:<br><textarea name="service" placeholder="e.g. Full Gut Rehab" required></textarea></label><br><br>
       <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+
+  <!-- NEW FREE ESTIMATE SECTION -->
+  <section id="free-estimate" class="content-section">
+    <h2>Request a Free Estimate</h2>
+    <form action="https://formspree.io/f/mrbkajwe" method="POST">
+      <label>Name:<br><input type="text" name="name" required></label><br><br>
+      <label>Email:<br><input type="email" name="email" required></label><br><br>
+      <label>Phone Number:<br><input type="tel" name="phone" required></label><br><br>
+      <label>Project Details:<br><textarea name="details" placeholder="Describe your project..." required></textarea></label><br><br>
+      <button type="submit" class="btn">Get My Free Estimate</button>
     </form>
   </section>
 
@@ -351,4 +339,3 @@
   </script>
 </body>
 </html>
-
