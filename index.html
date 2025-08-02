@@ -284,28 +284,74 @@
     </p>
   </section>
 
-  <section id="build-with-us" class="content-section">
-    <h2>Build With Us</h2>
-    <form action="https://formspree.io/f/mrbkajwe" method="POST">
-      <label>Name:<br><input type="text" name="name" required></label><br><br>
-      <label>Email:<br><input type="email" name="email" required></label><br><br>
-      <label>Phone Number:<br><input type="tel" name="phone" required></label><br><br>
-      <label>Service Needed:<br><textarea name="service" placeholder="e.g. Full Gut Rehab" required></textarea></label><br><br>
-      <button type="submit" class="btn">Submit</button>
-    </form>
-  </section>
+  <!-- ----- BUILD WITH US ----- -->
+<section id="build-with-us" class="content-section">
+  <h2>Build With Us</h2>
+  <form action="https://formspree.io/f/mrbkajwe" method="POST">
+    <input type="hidden" name="form_name" value="Build With Us">
+    
+    <label>Name:<br><input type="text" name="name" required></label><br><br>
+    <label>Email:<br><input type="email" name="email" required></label><br><br>
+    <label>Phone Number:<br><input type="tel" name="phone" required></label><br><br>
+    
+    <!-- Dropdown for services -->
+    <label>Select a Service:<br>
+      <select name="service_dropdown">
+        <option value="">-- Select a service --</option>
+        <option>Full Gut Rehabs</option>
+        <option>Interior & Exterior Renovations</option>
+        <option>Kitchen & Bathroom Remodeling</option>
+        <option>General Contracting</option>
+        <option>Project Management</option>
+        <option>Framing, Drywall & Finishing</option>
+        <option>Structural Repairs & Demolition</option>
+        <option>Site Cleanup & Final Touches</option>
+      </select>
+    </label><br><br>
+    
+    <!-- Text area in case they want something else -->
+    <label>Service Needed (Other):<br>
+      <textarea name="service_other" placeholder="e.g. New Garage Build"></textarea>
+    </label><br><br>
 
-  <!-- NEW FREE ESTIMATE SECTION -->
-  <section id="free-estimate" class="content-section">
-    <h2>Request a Free Estimate</h2>
-    <form action="https://formspree.io/f/mrbkajwe" method="POST">
-      <label>Name:<br><input type="text" name="name" required></label><br><br>
-      <label>Email:<br><input type="email" name="email" required></label><br><br>
-      <label>Phone Number:<br><input type="tel" name="phone" required></label><br><br>
-      <label>Project Details:<br><textarea name="details" placeholder="Describe your project..." required></textarea></label><br><br>
-      <button type="submit" class="btn">Get My Free Estimate</button>
-    </form>
-  </section>
+    <button type="submit" class="btn">Submit</button>
+  </form>
+</section>
+
+<!-- ----- FREE ESTIMATE ----- -->
+<section id="free-estimate" class="content-section">
+  <h2>Free Estimate</h2>
+  <form action="https://formspree.io/f/mrbkajwe" method="POST">
+    <input type="hidden" name="form_name" value="Free Estimate">
+    
+    <label>Name:<br><input type="text" name="name" required></label><br><br>
+    <label>Email:<br><input type="email" name="email" required></label><br><br>
+    <label>Phone Number:<br><input type="tel" name="phone" required></label><br><br>
+    
+    <!-- Dropdown for services -->
+    <label>Select a Service:<br>
+      <select name="service_dropdown">
+        <option value="">-- Select a service --</option>
+        <option>Full Gut Rehabs</option>
+        <option>Interior & Exterior Renovations</option>
+        <option>Kitchen & Bathroom Remodeling</option>
+        <option>General Contracting</option>
+        <option>Project Management</option>
+        <option>Framing, Drywall & Finishing</option>
+        <option>Structural Repairs & Demolition</option>
+        <option>Site Cleanup & Final Touches</option>
+      </select>
+    </label><br><br>
+    
+    <!-- Text area in case they want something else -->
+    <label>Service Needed (Other):<br>
+      <textarea name="service_other" placeholder="e.g. Custom Deck Build"></textarea>
+    </label><br><br>
+
+    <button type="submit" class="btn">Submit</button>
+  </form>
+</section>
+
 
   <footer>
     &copy; 2025 T-N-L Construction LLC | Built with pride in Chicago.
@@ -339,3 +385,4 @@
   </script>
 </body>
 </html>
+
